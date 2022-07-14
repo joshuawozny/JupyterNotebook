@@ -12541,7 +12541,7 @@ Standard Deviation = 51.49
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Confidence Interval for Average Relative Skill in the years 2013 to 2015&quot;</span><span class="p">)</span>
@@ -12641,35 +12641,35 @@ Probability a team has Average Relative Skill LESS than the Average Relative Ski
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Write your code in this code blocprint(&quot;Confidence Interval for Average Relative Skill in the years 2013 to 2015&quot;)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------------------------------------------------------------------------------------------&quot;</span><span class="p">)</span>
 
 <span class="c1"># Mean relative skill of all teams from the years 2013-2015</span>
-<span class="n">mean</span> <span class="o">=</span> <span class="n">your_years_leagues_df</span><span class="p">[</span><span class="s1">&#39;elo_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">assigned_years_league_df</span><span class="p">[</span><span class="s1">&#39;elo_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
 <span class="c1"># Standard deviation of the relative skill of all teams from the years 2013-2015</span>
-<span class="n">stdev</span> <span class="o">=</span> <span class="n">your_years_leagues_df</span><span class="p">[</span><span class="s1">&#39;elo_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">stdev</span> <span class="o">=</span> <span class="n">assigned_years_league_df</span><span class="p">[</span><span class="s1">&#39;elo_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
 
-<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">your_years_leagues_df</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">assigned_years_league_df</span><span class="p">)</span>
 
 <span class="c1">#Confidence interval</span>
 <span class="c1"># ---- TODO: make your edits here ----</span>
 <span class="n">stderr</span> <span class="o">=</span> <span class="n">stdev</span><span class="o">/</span><span class="p">(</span><span class="n">n</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="n">conf_int_95</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="o">.</span><span class="mi">95</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">stderr</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;95</span><span class="si">% c</span><span class="s2">onfidence interval (unrounded) for Average Relative Skill (ELO) in the years 2013 to 2015 =&quot;</span><span class="p">,</span> <span class="n">conf_int_95</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;95</span><span class="si">% c</span><span class="s2">onfidence interval (rounded) for Average Relative Skill (ELO) in the years 2013 to 2015 = (&quot;</span><span class="p">,</span>  <span class="nb">round</span><span class="p">(</span><span class="n">conf_int_95</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">conf_int_95</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span><span class="s2">&quot;)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;95</span><span class="si">% c</span><span class="s2">onfidence interval (unrounded) for Average Relative Skill (ELO) in the years 1996 to 1998 =&quot;</span><span class="p">,</span> <span class="n">conf_int_95</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;95</span><span class="si">% c</span><span class="s2">onfidence interval (rounded) for Average Relative Skill (ELO) in the years 1996 to 1998 = (&quot;</span><span class="p">,</span>  <span class="nb">round</span><span class="p">(</span><span class="n">conf_int_95</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">conf_int_95</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span><span class="s2">&quot;)&quot;</span><span class="p">)</span>
 
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Probability a team has Average Relative Skill LESS than the Average Relative Skill (ELO) of your team in the years 2013 to 2015&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Probability a team has Average Relative Skill LESS than the Average Relative Skill (ELO) of the Bulls in the years 1996 to 1998&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----------------------------------------------------------------------------------------------------------------------------------------------------------&quot;</span><span class="p">)</span>
 
 <span class="n">mean_elo_assigned_team</span> <span class="o">=</span> <span class="n">assigned_team_df</span><span class="p">[</span><span class="s1">&#39;elo_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">choice2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">mean_elo_your_team</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">stdev</span><span class="p">)</span>
+<span class="n">choice2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">mean_elo_assigned_team</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">stdev</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">choice2</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
@@ -12689,13 +12689,13 @@ Probability a team has Average Relative Skill LESS than the Average Relative Ski
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>------------------------------------------------------------------------------------------------------------
-95% confidence interval (unrounded) for Average Relative Skill (ELO) in the years 2013 to 2015 = (1502.0236894390478, 1507.1824625533618)
-95% confidence interval (rounded) for Average Relative Skill (ELO) in the years 2013 to 2015 = ( 1502.02 , 1507.18 )
+95% confidence interval (unrounded) for Average Relative Skill (ELO) in the years 1996 to 1998 = (1487.6565859527095, 1493.6465501840999)
+95% confidence interval (rounded) for Average Relative Skill (ELO) in the years 1996 to 1998 = ( 1487.66 , 1493.65 )
 
 
-Probability a team has Average Relative Skill LESS than the Average Relative Skill (ELO) of your team in the years 2013 to 2015
+Probability a team has Average Relative Skill LESS than the Average Relative Skill (ELO) of the Bulls in the years 1996 to 1998
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-0.3361
+0.9732
 </pre>
 </div>
 </div>
